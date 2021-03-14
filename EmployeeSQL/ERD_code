@@ -1,0 +1,33 @@
+Employees
+-
+emp_no INT PK 
+emp_title VARCHAR(200) FK >- Titles.title_id
+birth_date INT
+last_name VARCHAR(200)
+sex VARCHAR(200)
+hire_date INT
+
+Department
+-
+dept_no INT PK
+dept_name VARCHAR(200)
+
+Dept_emp
+-
+emp_no INT FK -< Employees.emp_no
+dept_no INT FK >-< Department.dept_no
+
+Dept_Manager
+-
+dept_no INT FK >- Department.dept_no
+emp_no INT FK - Employees.emp_no
+
+Salaries
+-
+emp_no INT FK - Employees.emp_no
+salary INT
+
+Titles
+-
+title_id INT PK 
+title  VARCHAR(200)
